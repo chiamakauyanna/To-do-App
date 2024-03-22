@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body{
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  color: rgb(209, 195, 203);
+  margin-top: 2em;
+}
+
+.container{
+  background-color: #16076e;
+  width: 40em;
+  margin: auto;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;border-radius: 1em;
+  position: relative;
+}
+
+h1{
+  font-family: "Oleo Script", system-ui;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+::placeholder {
+  color: grey;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.todo-input{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title-input,
+.description-input,
+.start-date-input,
+.due-date-input{
+  padding:0.6em ;
+  font-size: 16px;
+  margin: auto;
+  background-color: #e4dae2;
+  border: 0;
+  border-radius: .3em;
+  padding-left: .7em;
+}
+
+.description-input{
+  width: 31em;
+}
+
+.title-input{
+  width: 31em;
+}
+
+.date{
+  display: flex;
+  padding-left: 3.8em;
+  font-size: 1em;
+}
+
+button{
+   border: 0; 
+}
+
+.edit-button, 
+.delete-button,
+.complete-button,
+.save-button, 
+.cancel-button {
+  padding: 4px 8px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: white;
+}
+
+.c-text,
+.e-text,
+.d-text,
+.s-text,
+.c2-text {
+  display: none;
+  position: absolute;
+  color: #fff;
+  padding: 4px 6px;
+  margin-right: .6em;
+  border-radius: 4px;
+  z-index: 1;
+  font-size: 14px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+  
+
+.edit-button:hover, 
+.delete-button:hover,
+.complete-button:hover,
+.save-button:hover, 
+.cancel-button:hover{
+  background: #e4dae2;
+}
+
+.complete-button:hover + .c-text{
+  display: block;
+  color: rgb(230, 205, 205);
+  position: absolute;
+  right: 0;
+  left: 570px;
+}
+
+
+.delete-button:hover + .d-text{
+  display: block;
+  color: rgb(230, 205, 205);
+  position: absolute;
+  right: 0;
+  bottom:  30px;
+  left: 570px;
+}
+
+.edit-button:hover + .e-text{
+  display: block;
+  color: rgb(230, 205, 205);
+  position: absolute;
+  right: 0;
+  bottom: 65px;
+  left: 570px;
+}
+
+.save-button:hover+ .s-text {
+  display: block;
+  color: rgb(230, 205, 205);
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  left: 570px;
+}
+/* Position the text div for the cancel button */
+.cancel-button:hover + .c2-text {
+  display: block;
+  color: rgb(230, 205, 205);
+  position: absolute;
+  right: 0;
+  bottom: 45px;
+  left: 570px;
+}
+
+
+.add-button{
+  background-color: #ca096d;
+  color: rgb(228, 206, 223); 
+  padding: .4em 11.5em;
+  margin:  auto;
+  font-size: 1.2em;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.add-button:hover{
+  background-color: #c10e82;
+}
+
+
+#task-container{
+  width: 510px;
+  margin: auto;
+}
+
+.task-box{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em ;
+}
+
+
+.filters{
+  margin-top: 2em;
+}
+
+.filters span {
+  font-size: 17px;
+  color: #e0c5d9;
+  cursor: pointer;
+  margin-right: 3em;
+  margin-top: 1em;
+}
+
+.filters span:first-child {
+  margin-left: 0;
+}
+
+.filters span.active {
+  color: #ca096d;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.todo-item{
+  display: flex;
+  gap: .3em;
+}
+
+.text-input{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  gap: .4em;
+ 
+}
+
+.description{
+   word-wrap: break-word;
+   padding-right: .8em;
+}
+
+.todo-buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-edit{
+  color: #c10e82;
+}
+
+.fa-check{
+ color: green;
+}
+
+.fa-trash{
+  color: rgb(214, 74, 74);
+}
+
+.fa-save{
+  color: #3682eb;
+}
+
+.fa-times{
+  color: red;
+}
+
+.fa-undo{
+  color: orange;
+}

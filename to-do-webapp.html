@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Project</title>
+  <link rel="stylesheet" href="todo-list.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div  class="container">
+  <h1>My To-do App</h1>
+
+    <form class="todo-input">
+      <input type="text" placeholder="Todo Title"
+      class="title-input" required>
+    
+      <textarea name="description"  class="description-input" placeholder="Todo Description"></textarea>
+      
+      <div class="date">
+        <label for="due-date">
+          <input type="date" id="date" class="due-date-input" required>
+        </label> 
+      </div>
+      <button class="add-button">Add Task</button>
+    </form>
+    <div id="task-container">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+
+      <div class="task-box"></div>
+    </div>
+
+    <script src="todo-list.js"></script>
+  </div>
+</body>
+</html>
